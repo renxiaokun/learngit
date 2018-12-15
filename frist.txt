@@ -1,0 +1,3 @@
+我是git的第一个文件
+添加到git
+git add frist.txt
