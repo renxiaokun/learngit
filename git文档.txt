@@ -1,0 +1,89 @@
+
+配置用户名和密码
+git config -gobal user.name
+git config -gobal user.email
+
+1.新建一个文件
+mkdir project
+cd project
+
+2.git init 可以把init管理成可管理的仓库
+
+3.git add局势把代码提交到暂存区
+
+3.提交本地代码到远程仓库  -m 说明是本次提交 ，可以写上本次提交的说明
+git commit -m
+
+
+4.git log 可以查看历史提交
+
+5.HEAD表示当前版本，上一个版本就是HEAD^,上上一个就是HEAD^^
+
+回退到上一个版本就是git reset --hard HEAD^
+查看一下就是cat '文件名'
+
+只要命令的窗口没有关掉你还可以去到你刚才回退之前的版本
+git reset --hard 版本号
+
+git reset hard  filename回退到上一个文件
+
+6.git status 查看状态
+
+
+7.git diff HEAD --文件名
+命令查看工作区和暂存区的区别
+
+8.git checkout --file 可以丢弃工作区的修改 
+就是把全部工作区的内容撤销掉
+--是非常重要的没有 --就会切到另一个分支
+
+
+9.git reset HEAD file 可以把暂存区的文件撤销掉（unstage）,重新回到工作区
+
+10.$rm file直接把没用的文件删除
+
+11.git remote add origin https://github.com/renxiaokun/learngit.git
+把本地代码推向远程仓库
+orign 是远程库的名字 可以自己改
+
+12.git push -u orign master //本地库所有内容推上远程库
+由于远程库是空的我们第一次推送的master的时候加上-u
+
+13.git push orign master //暂存区的代码上传到远程仓库里面
+
+14.git push 就是把当前分支推上远程
+
+15.git checkout 分支名  切换分支
+
+16.git branch  分支名  新建分支
+
+git checkout -b  分支名  //-b 表示切换并创建分支 
+
+17.git branch 查看当前分支
+
+18git merge dev 用于合并指定分支到当前分支
+
+19.git branch -d dev 删除指定分支
+20.git meger --no-ff -m '提交新的commit' dev  
+--no-ff 不用快速的模式合并
+
+21git stash  储存现场
+
+储存完之后想要继续开发你就可以用git stash applay 进行恢复
+用git stash drop 来进行删除
+
+git stash pop 完成上面的两步
+
+22.丢弃一个没有合并过的分支 git branch -D filename  //强行删除
+
+23.查看远程库信息 git remote -v
+
+24.多人协作的时候需要用git pull进行合并
+
+25.在本地创建和远程分支对应的分支，使用git checkout -b branch-name origin/branch-name，本地和远程分支的名称最好一致；
+
+26.建立本地分支和远程分支的关联，使用git branch --set-upstream branch-name origin/branch-name；
+
+27.rebase操作可以把本地未push的分叉提交历史整理成直线；
+
+
